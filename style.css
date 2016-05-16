@@ -386,12 +386,12 @@ menu {
 
 .postBody h4,
 .postCon h4 {
-    font-size: 14px;
+    font-size: 16px !important;
 }
 
 .postBody h5,
 .postCon h5 {
-    font-size: 14px;
+    font-size: 14px !important;
 }
 
 .postBody h6,
