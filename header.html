@@ -1,3 +1,12 @@
 <a class="git-link" href="https://github.com/Jesse121/cnblogs" target="_blank">
     <img src="http://images.cnitblog.com/blog2015/294743/201503/241715567241255.png" alt="Fork me on GitHub">
 </a>
+<script>
+	$(function(){
+		//添加github
+		$('#blogTitle').append($('.git-link'));
+
+		//添加移动端视窗
+		$('head title').before('<meta name="viewport" content="width=device-width, initial-scale=1">');
+	});
+</script>

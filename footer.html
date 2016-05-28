@@ -1,71 +1,72 @@
-<!-- 返回顶部小火箭 -->
-<style type="text/css">
-	#rocket-to-top { background: url("http://images.cnblogs.com/cnblogs_com/jesse131/829285/o_rocket_button_up.png") no-repeat scroll 0 0 transparent; cursor: default; display: none; height: 250px; margin: -125px 0 0; overflow: hidden; padding: 0; position: fixed; right: 0; top: 90%; width: 149px; z-index: 11; }
-	#rocket-to-top div { left: 0; margin: 0; overflow: hidden; padding: 0; position: absolute; top: 0; width: 149px; }
-	#rocket-to-top .level-2 { background: url("http://images.cnblogs.com/cnblogs_com/jesse131/829285/o_rocket_button_up.png") no-repeat scroll -149px 0 transparent; display: none; height: 250px; opacity: 0; z-index: 1; }
-	#rocket-to-top .level-3 { background: none repeat scroll 0 0 transparent; cursor: pointer; display: block; height: 150px; z-index: 2; }
-</style>
-<div id="rocket-to-top">
-      <div class="level-2"></div>
-     <div class="level-3"></div>
-</div>
-<script type="text/javascript">
-	$(function() {
-		var e = $("#rocket-to-top"),
-		i = true;
-		$(window).scroll(function() {
-			var t = $(document).scrollTop();
-			t == 0 ? e.css("background-position") == "0px 0px" ? e.fadeOut("slow") : i && (i = !1, $(".level-2").css("opacity", 1), e.delay(100).animate({
-				marginTop: "-1000px"
+<!-- 返回顶部小火箭 start-->
+	<div id="rocket-to-top">
+	      <div class="level-2"></div>
+	     <div class="level-3"></div>
+	</div>
+	<script type="text/javascript">
+		$(function() {
+			var e = $("#rocket-to-top"),
+			i = true;
+			$(window).scroll(function() {
+				var t = $(document).scrollTop();
+				t == 0 ? e.css("background-position") == "0px 0px" ? e.fadeOut("slow") : i && (i = !1, $(".level-2").css("opacity", 1), e.delay(100).animate({
+					marginTop: "-1000px"
+				},
+				"normal",
+				function() {
+					e.css({
+						"margin-top": "-125px",
+						display: "none"
+					}),
+					i = !0
+				})) : e.fadeIn("slow")
+			}),
+			e.hover(function() {
+				$(".level-2").css("display","block").stop().animate({
+					opacity: 1
+				});
 			},
-			"normal",
 			function() {
-				e.css({
-					"margin-top": "-125px",
-					display: "none"
-				}),
-				i = !0
-			})) : e.fadeIn("slow")
-		}),
-		e.hover(function() {
-			$(".level-2").css("display","block").stop().animate({
-				opacity: 1
-			});
-		},
-		function() {
-			$(".level-2").css("display","none").stop().animate({
-				opacity: 0
-			});
-		}),
-		$(".level-3").click(function() {
-			function t() {
-				var t = e.css("background-position");
-				if (e.css("display") == "none" || i == false) {
-					clearInterval(n),
-					e.css("background-position", "0px 0px");
-					return
+				$(".level-2").css("display","none").stop().animate({
+					opacity: 0
+				});
+			}),
+			$(".level-3").click(function() {
+				function t() {
+					var t = e.css("background-position");
+					if (e.css("display") == "none" || i == false) {
+						clearInterval(n),
+						e.css("background-position", "0px 0px");
+						return
+					}
+					switch (t){
+					case "0px 0px":
+						e.css("background-position", "-298px 0px");
+						break;
+					case "-298px 0px":
+						e.css("background-position", "-447px 0px");
+						break;
+					case "-447px 0px":
+						e.css("background-position", "-596px 0px");
+						break;
+					case "-596px 0px":
+						e.css("background-position", "-745px 0px");
+						break;
+					case "-745px 0px":
+						e.css("background-position", "-298px 0px");
+					}
 				}
-				switch (t){
-				case "0px 0px":
-					e.css("background-position", "-298px 0px");
-					break;
-				case "-298px 0px":
-					e.css("background-position", "-447px 0px");
-					break;
-				case "-447px 0px":
-					e.css("background-position", "-596px 0px");
-					break;
-				case "-596px 0px":
-					e.css("background-position", "-745px 0px");
-					break;
-				case "-745px 0px":
-					e.css("background-position", "-298px 0px");
-				}
-			}
-			if (!i) return;
-			n = setInterval(t, 50),
-			$("html,body").animate({scrollTop: 0},"slow");
+				if (!i) return;
+				n = setInterval(t, 50),
+				$("html,body").animate({scrollTop: 0},"slow");
+			});
 		});
-	});
-</script>
-<!-- /返回顶部小火箭 -->
+	</script>
+<!-- /返回顶部小火箭 end-->
+<!-- 站长统计 start -->
+	<script type="text/javascript">
+	var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+	document.write(unescape("%3Cspan id='cnzz_stat_icon_1259209666'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1259209666' type='text/javascript'%3E%3C/script%3E"));
+	$('#footer').append($("#cnzz_stat_icon_1259209666"));
+	</script>
+<!-- 站长统计 end -->

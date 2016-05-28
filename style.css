@@ -1,20 +1,16 @@
+html {
+    color: #000;
+    overflow-y: scroll;
+}
+
 body {
-    //
-    background-image: url(images/bg.gif);
     padding: 50px 0 20px;
     margin: 0;
-    /* background-repeat: repeat; */
     background-color: #e7e7e7;
 }
 
 .clear {
     clear: both;
-}
-
-html {
-    color: #000;
-    overflow-y: scroll;
-    background: #fff;
 }
 
 h1,
@@ -46,7 +42,6 @@ td {
     list-style-type: none;
     list-style-image: none;
 }
-
 
 body,
 button,
@@ -82,13 +77,22 @@ tt {
     font-family: "Courier New", Courier, monospace;
 }
 
-small {
-    font-size: 12px;
+kbd {
+    display: inline-block;
+    padding: 3px 5px;
+    font-size: 11px;
+    line-height: 10px;
+    color: #555;
+    vertical-align: middle;
+    background-color: #fcfcfc;
+    border: solid 1px #ccc;
+    border-bottom-color: #bbb;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 #bbb;
 }
 
-ul,
-ol {
-    list-style: none;
+small {
+    font-size: 12px;
 }
 
 a:link,
@@ -185,10 +189,7 @@ menu {
 }
 
 #header {
-    /* height: 226px; */
     width: 100%;
-    /* background: url(http://images.cnblogs.com/cnblogs_com/jesse131/829285/o_o_top_background.png) repeat-x scroll 0 0; */
-    /* background-color: #2175bc; */
 }
 
 #lnkBlogLogo {
@@ -201,7 +202,6 @@ menu {
 }
 
 #main {
-    // margin-top: 10px;
     background-color: rgb(245, 245, 245);
     margin-bottom: 0px;
 }
@@ -209,12 +209,6 @@ menu {
 #mainContent {
     width: 72%;
     background: #fff;
-    /* box-shadow: 0px 0px 8px #999; */
-    -moz-box-shadow: 0px 0px 8px #999;
-    -web-kit-shadow: 0px 0px 8px #999;
-    /* border-radius: 6px; */
-    -moz-border-radius: 6px;
-    -web-kit-shadow: 6px;
     float: left;
     display: inline-block;
 }
@@ -223,16 +217,17 @@ menu {
     width: 25%;
     padding: 16px;
     font-size: 13px;
-    display: inline-block;
     overflow: hidden;
     color: #2D2D2D;
 }
-#sideBar a{
-	color:#464646;
+
+#sideBar a {
+    color: #464646;
 }
-#sideBar a:hover{
-	color:#3399ff;
-	text-decoration: none;
+
+#sideBar a:hover {
+    color: #3399ff;
+    text-decoration: none;
 }
 
 #blog-news .portrait {
@@ -250,7 +245,13 @@ menu {
     text-align: center;
     color: #000;
     font-size: 12px;
-    background-color: #C9C9C9;
+    background-color: #999;
+}
+
+#footer a,
+#footer a:hover {
+    color: #000;
+    text-decoration: none;
 }
 
 #navigator {
@@ -261,9 +262,7 @@ menu {
 
 #navList li {
     float: left;
-     padding: 0 10px; 
-    /* margin-right: 25px; */
-    /* display: inline; */
+    padding: 0 10px;
 }
 
 #navList li a {
@@ -276,12 +275,12 @@ menu {
 }
 
 #navList li a:hover {
-	background: none;
-	box-shadow: inset 0 0 5px rgba(0,0,0, 0.4), rgba(255,255,255,0.1) 0 1px 0;
-	border-radius: 4px;
-	border: 1px solid rgba(0,0,0,0.25);
-	color: #fff;
-	text-shadow: rgba(0, 0, 0, 0.796875) 0 -1px 0, rgba(255, 255, 255, 0.296875) 0 0 10px;
+    background: none;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.1) 0 1px 0;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    color: #fff;
+    text-shadow: rgba(0, 0, 0, 0.796875) 0 -1px 0, rgba(255, 255, 255, 0.296875) 0 0 10px;
 }
 
 .blogStats {
@@ -306,19 +305,17 @@ menu {
     background: white;
     padding: 10px 30px;
 }
-.postSeparator{
-	margin:20px 0;
+
+.postSeparator {
+    margin: 20px 0;
 }
 
 .postTitle,
 .postTitl2,
 .entrylistPosttitle {
     font-size: 20px;
-    padding-right: 64px;
-    padding-left: 10px;
-    border-left-width: 3px;
-    border-left-style: solid;
-    border-left-color: #2175bc;
+    padding: 0 64px 0 10px;
+    border-left: 3px solid #2175bc;
 }
 
 .postTitle a,
@@ -363,9 +360,9 @@ menu {
     line-height: 24px;
     padding: 20px;
     color: #464646;
-    border-radius: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
     background: #f0f0f0;
-    -ms-border-radius: 10px;
 }
 
 .postCon h1,
@@ -405,7 +402,7 @@ menu {
 
 .postBody h6,
 .postCon h6 {
-    font-size: 14px;
+    font-size: 14px!important;
 }
 
 .postBody dd,
@@ -462,7 +459,7 @@ menu {
 }
 
 .dayTitle {
-	display:none;
+    display: none;
     border: 1px solid #cccccc;
     position: relative;
     top: -20px;
@@ -478,48 +475,51 @@ menu {
     color: #333;
 }
 
-.topicListFooter {
-    // padding: 32px;
-}
-
-
 .newsItem,
 #blog-calendar,
 .sidebar-block {
-	margin-bottom: 15px;
-	border:1px solid #ccc;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 1px 1px 3px #ccc;
 }
-#sidebar_search,#sidebar_toptags{
-	display:none;
+
+#sidebar_search,
+#sidebar_toptags {
+    display: none;
 }
 
-#blog-news,#blog-calendar,.sidebar-block ul{
-	padding:10px;
-}
-.sidebar-block ul li{
-	line-height:1.8;
-}
-#profile_block,.visitor{
-	line-height:1.8;
-	margin:0;
+#blog-news,
+#blog-calendar,
+.sidebar-block ul {
+    padding: 10px;
 }
 
+.sidebar-block ul li {
+    line-height: 1.8;
+}
+
+#profile_block,
+.visitor {
+    line-height: 1.8;
+    margin: 0;
+}
 
 #sideBarMain h3 {
     height: 35px;
     line-height: 35px;
     font-weight: bold;
     font-size: 16px;
-    // margin-bottom:12px;
     padding-left: 10px;
     color: #fff;
     border-radius: 8px 8px 0 0;
     background-color: #2175BC;
 }
 
+.CalTodayDay {
+    color: #3399ff;
+}
 
 #blog-comments-placeholder,
 #divRefreshComments,
@@ -549,40 +549,55 @@ menu {
 }
 
 .forFlow img {
-    margin: 0 10px 0 0 ;
+    margin: 0 10px 0 0;
 }
-#MySignature{
-	display: block;
-	color: #2175BC;
+
+#MySignature {
+    display: block;
+    color: #2175BC;
 }
-#div_digg{
-	margin-right:0;
+#author_profile{
+    margin: 10px 0;
+    width:auto;
 }
-#green_channel{
-	width:100%;
+#div_digg {
+    margin: 0;
+}
+
+#green_channel {
+    width: 100%;
     background-color: #2175BC;
-	border:none;
+    border: none;
 }
-#green_channel a{
-	border-radius: 5px;
-	    margin-right: 30px;
+
+#green_channel a {
+    border-radius: 5px;
+    margin-right: 30px;
 }
-.c_ad_block{
-	display:none;
+
+.c_ad_block,
+#ad_t2 {
+    display: none;
 }
-#under_post_news,#under_post_kb{
-	display:none;
+
+#under_post_news,
+#under_post_kb {
+    display: none;
 }
-.commentbox_title{
-	width:100%;
+
+.commentbox_title {
+    width: 100%;
 }
-div.commentform input.author{
-	width:200px;
+
+div.commentform input.author {
+    width: 200px;
 }
-div.commentform textarea{
-	width:100%;
-	height:200px;
+
+div.commentform textarea {
+    width: 100%;
+    height: 200px;
 }
+
 .PostList,
 .entrylistItem {
     margin: 20px;
@@ -594,15 +609,16 @@ div.commentform textarea{
 }
 
 #blogTitle {
-	height:113px;
+    height: 113px;
     display: block;
-    position:relative;
+    position: relative;
 }
-.git-link{
-	position:absolute;
-	top:0;
-	right:0;
-	z-index:1;
+
+.git-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
 }
 
 .cnblogs_code img {
@@ -655,4 +671,98 @@ h4 {
 
 #cnblogs_post_body img {
     max-width: 650px;
+}
+
+#rocket-to-top {
+    background: url("http://images.cnblogs.com/cnblogs_com/jesse131/829285/o_rocket_button_up.png") no-repeat scroll 0 0 transparent;
+    cursor: default;
+    display: none;
+    height: 250px;
+    margin: -125px 0 0;
+    overflow: hidden;
+    padding: 0;
+    position: fixed;
+    right: 0;
+    top: 90%;
+    width: 149px;
+    z-index: 11;
+}
+
+#rocket-to-top div {
+    left: 0;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 149px;
+}
+
+#rocket-to-top .level-2 {
+    background: url("http://images.cnblogs.com/cnblogs_com/jesse131/829285/o_rocket_button_up.png") no-repeat scroll -149px 0 transparent;
+    display: none;
+    height: 250px;
+    opacity: 0;
+    z-index: 1;
+}
+
+#rocket-to-top .level-3 {
+    background: none repeat scroll 0 0 transparent;
+    cursor: pointer;
+    display: block;
+    height: 150px;
+    z-index: 2;
+}
+
+@media screen and (max-width: 640px) {
+    html {
+        font-size: 62.5%;
+    }
+    body {
+        font-size: 1.2rem;
+        padding: 0;
+    }
+    #home {
+        width: 100%;
+        border-radius: 0;
+    }
+    .git-link,
+    .blogStats,
+    #sideBar,
+    #navList li:nth-child(3),
+    #navList li:nth-child(6) {
+        display: none;
+    }
+    #rocket-to-top {
+        display: none!important;
+    }
+    #navList li {}
+    #mainContent {
+        width: 100%;
+        float: none;
+        display: block;
+    }
+    .postTitle,
+    .postTitl2,
+    .entrylistPosttitle {
+        font-size: 1.4rem;
+        padding: 0 1rem;
+        border-left: 3px solid #2175bc;
+    }
+    .day,.post{
+        padding:1rem;
+    }
+    .postCon .c_b_p_desc{
+        font-size:1.2rem;
+        line-height: 1.8rem;
+    }
+    #cnblogs_post_body{
+        font-size:1.2rem;
+    }
+    #green_channel a{
+        margin-right:0;
+    }
+    #blog-comments-placeholder, #divRefreshComments, .commentform, #AjaxHolder_UpdatePanel1{
+        padding:0 1rem;
+    }
 }
