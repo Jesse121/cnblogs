@@ -391,7 +391,6 @@ menu {
     padding:5px 10px;
     color: #fff;
     border-radius: 5px;
-    box-shadow: 1px 1px 5px #000;
     background-color: #2175BC;
 }
 
@@ -436,7 +435,6 @@ menu {
 .postBody ol,
 .postCon ol {
     list-style: none;
-    margin-left: 20px;
 }
 
 .postBody blockquote,
@@ -645,7 +643,7 @@ div.commentform textarea {
 
 h4 {
     margin: 0 -32px;
-    padding: 0 32px;
+    // padding: 0 32px;
 }
 
 #myposts .myposts_title {
